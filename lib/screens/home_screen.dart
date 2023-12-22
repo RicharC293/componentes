@@ -1,3 +1,5 @@
+import 'package:componentes/screens/lists_screen.dart';
+import 'package:componentes/screens/lists_view_screen.dart';
 import 'package:componentes/screens/routing_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +25,22 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               Navigator.pushNamed(context, RoutingScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text('Listas - Single Child Scroll View'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, ListScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text('Listas - ListView'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, ListsViewScreen.routeName);
             },
           ),
         ],
