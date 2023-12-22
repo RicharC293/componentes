@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       routes: routes,
       initialRoute: HomeScreen.routeName,
+      theme: ThemeData.light(useMaterial3: true),
     );
   }
 }
