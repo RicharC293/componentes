@@ -1,3 +1,4 @@
+import 'package:componentes/screens/routing_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,17 +11,18 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Componentes'),
       ),
+
       /// ListView -> scrolleable
       /// -> paddings
       /// -> fisica -> physics
       body: ListView(
         children: [
           ListTile(
-            leading: Icon(Icons.pages),
-            title: Text('Routing'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.pages),
+            title: const Text('Routing'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              print("TAP");
+              Navigator.pushNamed(context, RoutingScreen.routeName);
             },
           ),
         ],
