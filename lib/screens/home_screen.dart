@@ -1,3 +1,5 @@
+import 'package:componentes/screens/alerts_screen.dart';
+import 'package:componentes/screens/card_screen.dart';
 import 'package:componentes/screens/lists_screen.dart';
 import 'package:componentes/screens/lists_view_screen.dart';
 import 'package:componentes/screens/routing_screen.dart';
@@ -41,6 +43,22 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               Navigator.pushNamed(context, ListsViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_alert),
+            title: const Text("Alertas"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, AlertsScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.card_giftcard),
+            title: const Text("Tarjeta - Card"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, CardScreen.routeName);
             },
           ),
         ],

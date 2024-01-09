@@ -1,3 +1,5 @@
+import 'package:componentes/screens/alerts_screen.dart';
+import 'package:componentes/screens/card_screen.dart';
 import 'package:componentes/screens/home_screen.dart';
 import 'package:componentes/screens/lists_screen.dart';
 import 'package:componentes/screens/lists_view_screen.dart';
@@ -12,4 +14,6 @@ final routes = {
   NavigationScreen.routeName: (context) => const NavigationScreen(),
   ListScreen.routeName: (context) => const ListScreen(),
   ListsViewScreen.routeName: (context) => const ListsViewScreen(),
+  AlertsScreen.routeName: (context) => const AlertsScreen(),
+  CardScreen.routeName: (context) => const CardScreen(),
 };
