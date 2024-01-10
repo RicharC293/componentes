@@ -12,6 +12,12 @@ class MyApp extends StatelessWidget {
       routes: routes,
       initialRoute: HomeScreen.routeName,
       theme: ThemeData.light(useMaterial3: true),
+      // Modificar el tema del texto
+      // theme: ThemeData.light(useMaterial3: true).copyWith(
+      //   textTheme: TextTheme(
+
+      //   )
+      // ),
     );
   }
 }

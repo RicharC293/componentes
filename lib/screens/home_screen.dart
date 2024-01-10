@@ -2,7 +2,9 @@ import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/card_screen.dart';
 import 'package:componentes/screens/lists_screen.dart';
 import 'package:componentes/screens/lists_view_screen.dart';
+import 'package:componentes/screens/photo_album_screen.dart';
 import 'package:componentes/screens/routing_screen.dart';
+import 'package:componentes/screens/sliders_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -59,6 +61,22 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               Navigator.pushNamed(context, CardScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.photo_album),
+            title: const Text("Album de fotos"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, PhotoAlbumScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.slideshow),
+            title: const Text("Sliders"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, SlidersScreen.routeName);
             },
           ),
         ],
