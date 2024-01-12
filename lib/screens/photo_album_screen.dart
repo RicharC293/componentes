@@ -1,3 +1,4 @@
+import 'package:componentes/widgets/image_card.dart';
 import 'package:flutter/material.dart';
 
 class PhotoAlbumScreen extends StatelessWidget {
@@ -80,24 +81,8 @@ class PhotoAlbumScreen extends StatelessWidget {
             crossAxisCount: 3,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            children: listImages
-                .map(
-                  (image) => Card(
-                    elevation: 10,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      // child: Image.network(image),
-                      child: FadeInImage(
-                        placeholder: const AssetImage('assets/loading.gif'),
-                        image: NetworkImage(image),
-                        imageErrorBuilder: (context, error, stackTrace) =>
-                            Image.asset('assets/placeholder.jpeg',
-                                fit: BoxFit.cover),
-                      ),
-                    ),
-                  ),
-                )
-                .toList(),
+            children:
+                listImages.map((image) => ImageCard(image: image)).toList(),
           ),
         ],
       ),

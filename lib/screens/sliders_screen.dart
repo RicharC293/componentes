@@ -33,8 +33,8 @@ class _SlidersScreenState extends State<SlidersScreen> {
       body: Column(
         children: [
           ImageFiltered(
-            imageFilter:
-                ImageFilter.dilate(radiusX: valueSlider3, radiusY: valueSlider3),
+            imageFilter: ImageFilter.dilate(
+                radiusX: valueSlider3, radiusY: valueSlider3),
             child: Transform.rotate(
               angle: valueSlider2 * pi,
               child: Transform.scale(
@@ -45,12 +45,14 @@ class _SlidersScreenState extends State<SlidersScreen> {
           ),
           Slider(
             value: valueSlider1,
+            divisions: 5,
             onChanged: (value) {
               // print(value);
               setState(() {
                 valueSlider1 = value;
               });
             },
+            label: valueSlider1.round().toString(),
             thumbColor: Colors.red,
             activeColor: Colors.yellow,
             inactiveColor: Colors.black,
