@@ -41,6 +41,25 @@ class AlertsScreen extends StatelessWidget {
   }
 
   Future<void> _crearAlertaCupertino(BuildContext context) async {
+// Toast
+    const snackBar = SnackBar(
+      content: Text('Yay! A SnackBar!'),
+    );
+
+    final materialBanner =
+        MaterialBanner(content: Text('Yay! A Banner!'), actions: [
+      TextButton(
+          onPressed: () {
+            ScaffoldMessenger.of(context).clearMaterialBanners();
+          },
+          child: Text('Banner'))
+    ]);
+
+// Find the ScaffoldMessenger in the widget tree
+// and use it to show a SnackBar.
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    ScaffoldMessenger.of(context).showMaterialBanner(materialBanner);
+
     showCupertinoDialog(
         context: context,
         builder: (context) {
@@ -72,6 +91,11 @@ class AlertsScreen extends StatelessWidget {
     // } else {
     //   _crearAlertaCupertino(context);
     // }
+    bool isClosed = false;
+    Future.delayed(const Duration(seconds: 5), () {
+      if (isClosed) return;
+      Navigator.pop(context);
+    });
     await showAdaptiveDialog(
         context: context,
         builder: (context) {
@@ -96,6 +120,7 @@ class AlertsScreen extends StatelessWidget {
             ],
           );
         });
+    isClosed = true;
   }
 
   Widget adaptiveAction(
@@ -116,7 +141,7 @@ class AlertsScreen extends StatelessWidget {
   }
 
   /// Validar que funcione en la web
-  /// Condición que ter permite crear un tipo de botón diferente 
+  /// Condición que ter permite crear un tipo de botón diferente
   /// en el caso de que se use en la web. ElevatedButton(),
 
   @override
