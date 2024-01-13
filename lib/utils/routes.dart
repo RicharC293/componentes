@@ -1,5 +1,6 @@
 import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/card_screen.dart';
+import 'package:componentes/screens/form_screen.dart';
 import 'package:componentes/screens/home_screen.dart';
 import 'package:componentes/screens/infinity_scroll_screen.dart';
 import 'package:componentes/screens/lists_screen.dart';
@@ -22,4 +23,5 @@ final routes = {
   PhotoAlbumScreen.routeName: (context) => PhotoAlbumScreen(),
   SlidersScreen.routeName: (context) => const SlidersScreen(),
   InfinityScrollScreen.routeName: (context) => const InfinityScrollScreen(),
+  FormScreen.routeName: (context) => const FormScreen(),
 };
