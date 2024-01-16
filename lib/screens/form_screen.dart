@@ -60,7 +60,6 @@ class _FormScreenState extends State<FormScreen> {
                     border: OutlineInputBorder(),
                     labelText: 'Nombre',
                     hintText: 'Richar',
-                  
                     prefixIcon: Icon(Icons.person),
                   ),
                   maxLines: 5,
@@ -225,7 +224,6 @@ class _FormScreenState extends State<FormScreen> {
                         _formKey.currentState?.validate() ?? false;
                     if (!esValidoElForm) return;
                     _formKey.currentState?.save();
-          
                   },
                   child: const Text('Registrarse'),
                 ),
